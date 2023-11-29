@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change() {
+            document.querySelector('.Example').style.backgroundColor = 'yellow'
+            document.querySelector('.Example').style.color = 'blue'
+            document.querySelector('.Example').style.fontSize = '150%'
+            document.querySelector('.borderred').style.border = '2px solid red'
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <p class="Example" style="background-color: aqua;padding: 1%;color:green;">This is the first paragraph with
+            class "Example"</p>
+    </div>
+    <p>This is another paragraph</p>
+    <a href="#" class="borderred">Link with target attribute</a><br>
+    <button onclick="change()">Change</button>
+</body>
+
+</html>

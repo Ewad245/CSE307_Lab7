@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change() {
+            document.querySelector('.example').style.backgroundColor = 'yellow'
+            let example = document.querySelectorAll('.example')
+            for (let i = 0; i < example.length; i++) {
+                example[i].style.padding = "0.5%"
+                example[i].style.margin = '1%'
+                example[i].style.border = '2px solid green'
+            }
+            let a = document.querySelectorAll('a');
+            for (let i = 0; i < a.length; i++) {
+                a[i].style.border = '2px solid red'
+                a[i].style.textDecoration = 'none'
+            }
+            let title =document.querySelectorAll('.Title')
+            for (let i = 0; i < title.length; i++) {
+                title[i].style.color = 'rgb(255, 164, 51)'
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        .example {
+            border: 1px solid black;
+            padding: 1%;
+            background-color: aqua;
+        }
+
+        .Title {
+            color: blueviolet;
+        }
+    </style>
+    <p class="example">This is the first paragraph with class "Example"</p>
+    <p class="example">Another paragraph with class "Example"</p>
+    <p>This is a regular paragraph</p>
+    <a href="#" target="_blank">Link with target attribute</a><br>
+    <a href="#" target="_blank">Another link with target attribute</a>
+    <h1 class="Title">Title 1</h1>
+    <h2 class="Title">Title 2</h2>
+    <button onclick="change()">Change</button>
+
+</body>
+
+</html>

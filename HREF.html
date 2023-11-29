@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addlink() {
+            let link1='https://www.w3schools.com/js/default.asp';
+            let link2='https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp';
+            let link3='https://www.w3schools.com/jsref/met_document_queryselector.asp';
+            document.getElementById('container').innerHTML+=`<a href='${link1}'>Website 1</a>
+            <br><a href='${link2}'>Website 2</a>
+            <br><a href='${link3}'>Website 3</a>`
+        }
+    </script>
+</head>
+<body onload="addlink()">
+    <h3>Problem 1.Replace all href values</h3>
+    <div id="container"></div>
+</body>
+</html>

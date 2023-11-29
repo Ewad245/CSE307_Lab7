@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #alert1 {
+            padding: 20px;
+            background-color: #f44336;
+            margin-bottom: 1%;
+            color: white;
+        }
+
+        #alert2 {
+            padding: 20px;
+            background-color: greenyellow;
+            margin-bottom: 1%;
+            color: white;
+        }
+
+        #alert3 {
+            padding: 20px;
+            background-color: aqua;
+            margin-bottom: 1%;
+            color: white;
+        }
+
+        #alert4 {
+            padding: 20px;
+            background-color: rgb(255, 164, 51);
+            margin-bottom: 1%;
+            color: white;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
+    <script>
+        const myTimeout = setTimeout(exit, 5000);
+        function exit() {
+            let tag =document.querySelectorAll('.alert');
+            for(let i=0;i<tag.length;i++) {
+                tag[i].style.display='none'
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Alert Messages</h2>
+
+    <p>Click on the "x" symbol to close the alert message.</p>
+    <div id="alert1" class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <div id="alert2" class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Success!</strong> Indicates a successful or positive action
+    </div>
+    <div id="alert3" class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Info!</strong> Indicates a neutral informative change or action
+    </div>
+    <div id="alert4" class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning!</strong> Indicates a warning that might need attention
+    </div>
+
+</body>
+
+</html>
