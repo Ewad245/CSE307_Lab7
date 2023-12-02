@@ -3,6 +3,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <script>
+        function Validation(){
+            let Name = document.getElementById('FullName').value;
+            let Email = document.getElementById('Email').value;
+            const pattern= new RegExp('^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
+            let Password = document.getElementById('Password').value;
+            let ConfirmPass = document.getElementById('ConfirmPass').value;
+            if(Name==''){
+                document.getElementById('NameValid').innerText='Please input your name'
+            } else{
+                document.getElementById('NameValid').innerText=''
+            }
+            if(Email=='' || !pattern.test(Email)){
+                document.getElementById('EmailValid').innerText='Please input your email'
+            } else{
+                document.getElementById('EmailValid'),innerText=''
+            }
+            if(Password){
+
+            }
+        }
+    </script>
 </head>
 <body>
     <form action="">
@@ -10,25 +32,29 @@
         <tr>
             <th>Fullname*</th>
             <td>
-                <input type="text" name="Fullname" value="Quynh" required>
+                <input type="text" name="Fullname" id="FullName" required>
+                <p id="NameValid"></p>
             </td>
         </tr>
         <tr>
             <th>Email*</th>
             <td>
-                <input type="text" name="Email" value="quynh.tran@eiu.edu.vn" required="Please fill in this field" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+                <input type="text" name="Email" id="Email" required="Please fill in this field" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+                <p id="EmailValid"></p>
             </td>
         </tr>
         <tr>
             <th>Password*</th>
             <td>
-                <input type="password" name="Password" value="Hehehe" required="Please fill in this field">
+                <input type="password" name="Password" id="Password" required="Please fill in this field">
+                <p id="PasswordValid"></p>
             </td>
         </tr>
         <tr>
             <th>Confirm Password*</th>
             <td>
-                <input type="password" name="ConfirmPass" value="Hehehe" required="Please fill in this field">
+                <input type="password" name="ConfirmPass" id="ConfirmPass" required="Please fill in this field">
+                <p id="ConfirmPassValid"></p>
             </td>
         </tr>
         <tr>
@@ -101,7 +127,7 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2" style="text-align: center;"><input type="submit"></td>
+            <td colspan="2" style="text-align: center;"><button>Submit</button></td>
         </tr>
     </table>
 </form>
