@@ -34,7 +34,7 @@
     </div>
     <div class="container2">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" style="width:100%">
+        <img id="expandedImg" style="width:100%; position: relative;">
         <div id="imgtext"></div>
     </div>
 
@@ -44,6 +44,11 @@
             width: 350px;
             opacity: 0.5;
             height: 450px;
+        }
+        div.container2 div#imgtext {
+            position: absolute;
+            bottom:34%;
+            right: 0.5%;
         }
     </style>
 </body>
